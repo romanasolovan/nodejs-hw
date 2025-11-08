@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanasolovan/nodejs-hw.git"
+  },
+  "keywords": [],
+  "author": "romanasolovan <solo.rv95@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romanasolovan/nodejs-hw/issues"
+  },
+  "homepage": "https://github.com/romanasolovan/nodejs-hw#readme",
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pino-http": "^11.0.0"
+  }
+}
