@@ -19,13 +19,13 @@ app.use(cors());
 
 app.use('/notes', notesRouter);
 
-// celebrate validation errors middleware
+
 app.use(celebrateErrors());
 
-// 404 handler
+
 app.use(notFoundHandler);
 
-// global error handler
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
