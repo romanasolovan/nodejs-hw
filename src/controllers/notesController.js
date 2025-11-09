@@ -9,7 +9,6 @@ export const getAllNotes = async (req, res, next) => {
     const perPage = Number(req.query.perPage) || 10;
     const { tag, search } = req.query;
 
-    // Build Mongo filter
     const filter = {};
     if (tag) filter.tag = tag;
     if (search && search.trim() !== '') {
