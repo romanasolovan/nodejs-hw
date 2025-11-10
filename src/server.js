@@ -10,6 +10,7 @@ import { notFoundHandler } from './middleware/notFoundHandler.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import cookieParser from 'cookie-parser';
 import { authRouter } from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ app.use(cookieParser());
 
 app.use('/notes', notesRouter);
 app.use('/auth', authRouter);
-
+app.use('/users', userRoutes);
 
 app.use(celebrateErrors());
 

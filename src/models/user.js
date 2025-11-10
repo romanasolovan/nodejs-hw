@@ -17,18 +17,22 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: 8,
     },
+    avatar: {
+      type: String,
+      default: 'https://ac.goit.global/fullstack/react/default-avatar.jpg',
+    },
   },
   { timestamps: true }
 );
 
-// Remove password before sending back to client
+
 userSchema.methods.toJSON = function () {
   const obj = this.toObject();
   delete obj.password;
   return obj;
 };
 
-// Default username = email
+
 userSchema.pre('save', function (next) {
   if (!this.username) {
     this.username = this.email;
